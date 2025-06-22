@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: your-dockerhub-username/nextjs-app
+  repository: gnuhhung317/nextjs-app
   tag: "latest"
   pullPolicy: Always
 service:
