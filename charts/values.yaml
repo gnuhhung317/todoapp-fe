@@ -70,11 +70,17 @@ resources: {}
 livenessProbe:
   httpGet:
     path: /
-    port: http
+    port: 3000
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  timeoutSeconds: 5
 readinessProbe:
   httpGet:
     path: /
-    port: http
+    port: 3000
+  initialDelaySeconds: 60
+  periodSeconds: 10
+  timeoutSeconds: 5
 
 autoscaling:
   enabled: false
