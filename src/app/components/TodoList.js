@@ -5,7 +5,7 @@ import axios from 'axios';
 import TodoForm from './TodoForm';
 import TodoItem from './TodoItem';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/todos';
+const API_BASE_URL = 'http://192.168.56.108:31001/api/todos';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
