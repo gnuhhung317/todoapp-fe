@@ -1,9 +1,0 @@
-replicaCount: 1
-image:
-  repository: gnuhhung317/nextjs-app
-  tag: "latest"
-  pullPolicy: Always
-service:
-  type: NodePort
-  port: 3000
-  nodePort: 30003
