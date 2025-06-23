@@ -36,7 +36,7 @@ pipeline {
                         git url: "${CONFIG_REPO}", credentialsId: 'git-credentials', branch: 'main'
                         sh 'git config user.email "jenkins@example.com"'
                         sh 'git config user.name "Jenkins"'
-                        sh "sed -i 's|image: gnuhhung317/nextjs-app:.*|image: gnuhhung317/nextjs-app:${tag}|g' nextjs-values.yaml"
+                        sh "sed -i 's|tag: \".*\"|tag: \"${tag}\"|g' nextjs-values.yaml"
                         sh "git add nextjs-values.yaml"
                         sh "git commit -m 'Update nextjs-app image version to ${tag}'"
                         sh "git push origin main"
