@@ -33,7 +33,7 @@ pipeline {
                 script {
                     def tag = env.TAG_NAME ?: env.GIT_COMMIT.take(7)
                     dir('config-repo') {
-                        git url: "${CONFIG_REPO}", credentialsId: 'git-credentials'
+                        git url: "${CONFIG_REPO}", credentialsId: 'git-credentials', branch: 'main'
                         sh "sed -i 's|image: gnuhhung317/nextjs-app:.*|image: gnuhhung317/nextjs-app:${tag}|g' fe-values.yaml"
                         sh "git add fe-values.yaml"
                         sh "git commit -m 'Update nextjs-app image version to ${tag}'"
