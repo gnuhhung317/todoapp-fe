@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            label 'docker-agent'
+            defaultContainer 'docker'
+        }
+    }
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
         CONFIG_REPO = 'https://github.com/gnuhhung317/todo-config.git'
