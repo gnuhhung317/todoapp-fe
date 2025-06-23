@@ -89,7 +89,7 @@ const TodoList = () => {
             </svg>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4 leading-tight">
-            Todo List
+            Tu đu lít
           </h1>
           <p className="text-gray-600 text-lg sm:text-xl leading-relaxed text-center">
             Organize your tasks efficiently and boost your productivity
